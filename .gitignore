@@ -14,4 +14,4 @@
 .cxx
 /app/src/sample/*
 /app/src/main/assets/*
-app/src/google-services.json
+app/google-services.json

@@ -16,6 +16,7 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+
     buildTypes {
         release {
             minifyEnabled false
@@ -38,10 +39,11 @@ dependencies {
     api "com.urbanairship.android:urbanairship-fcm:12.2.0"
     api "com.urbanairship.android:urbanairship-ads-identifier:12.2.0"
     api "com.urbanairship.android:urbanairship-preference:12.2.0"
+    implementation 'com.google.firebase:firebase-core:17.2.1'
     implementation "com.google.firebase:firebase-messaging:20.0.0"
-}
 
-def googleServicesFile = rootProject.file('sample/google-services.json')
-if (googleServicesFile.exists()) {
-    apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
 }
+apply plugin: 'com.google.gms.google-services'
+
+
+
