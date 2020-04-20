@@ -40,3 +40,8 @@ dependencies {
     api "com.urbanairship.android:urbanairship-preference:12.2.0"
     implementation "com.google.firebase:firebase-messaging:20.0.0"
 }
+
+def googleServicesFile = rootProject.file('sample/google-services.json')
+if (googleServicesFile.exists()) {
+    apply plugin: 'com.google.gms.google-services'  // Google Play services Gradle plugin
+}
