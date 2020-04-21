@@ -4,6 +4,7 @@
     package="com.example.uasample">
 
     <application
+        android:name=".UAApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -14,7 +15,7 @@
         <!-- Autopilot calls takeOff without the need to override the Application -->
         <meta-data
             android:name="com.urbanairship.autopilot"
-            android:value="com.urbanairship.Autopilot" />
+            android:value="com.example.uasample.CustomAutopilot" />
 
 
         <service

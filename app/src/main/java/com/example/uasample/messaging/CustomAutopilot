@@ -1,0 +1,29 @@
+import android.app.Application
+import com.urbanairship.Autopilot
+import com.urbanairship.UAirship
+import com.urbanairship.push.NotificationActionButtonInfo
+import com.urbanairship.push.NotificationInfo
+import com.urbanairship.push.NotificationListener
+
+class CustomAutoPilot : Autopilot() {
+    override fun onAirshipReady(airship : UAirship) {
+
+
+        // Notification listener
+        airship.pushManager.setNotificationListener(object : NotificationListener {
+            override fun onNotificationPosted(notificationInfo: NotificationInfo) {
+            }
+            override fun onNotificationOpened(notificationInfo: NotificationInfo): Boolean {
+                // Return false here to allow Airship to auto launch the launcher activity
+                return true
+            }
+            override fun onNotificationForegroundAction(notificationInfo: NotificationInfo, actionButtonInfo: NotificationActionButtonInfo): Boolean {
+                return false
+            }
+            override fun onNotificationBackgroundAction(notificationInfo: NotificationInfo, actionButtonInfo: NotificationActionButtonInfo) {
+            }
+            override fun onNotificationDismissed(notificationInfo: NotificationInfo) {
+            }
+        })
+    }
+}

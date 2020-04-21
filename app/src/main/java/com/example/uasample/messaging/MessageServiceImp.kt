@@ -1,4 +1,5 @@
 
+import android.app.Application
 import com.bskyb.messagingservice.AirshipListener
 import com.bskyb.messagingservice.MessagingService
 import com.urbanairship.UAirship
