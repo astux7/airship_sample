@@ -12,6 +12,5 @@
 /captures
 .externalNativeBuild
 .cxx
-/app/src/sample/*
 /app/src/main/assets/*
 app/google-services.json
