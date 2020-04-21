@@ -3,6 +3,7 @@
 Urban Airship SDK version - 12.2.0
 
 Need to add 2 files:
+
 ../app/src/main/assets/airshipconfig.preperties
 
 ../app/google-services.json
